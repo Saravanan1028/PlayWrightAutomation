@@ -57,14 +57,15 @@ console.log(a.concat(" ",b));
 //Task
 
 let username = " Saravanan ";
+let minimumlimit = 15;
 console.log(username.trim());
 let userlength=username.length;
 console.log(userlength);
 
-if(userlength>=5){
+if(userlength>=minimumlimit){
     console.log("Valid Username");
 }
 
 else{
-    console.log("username should be minimum 5 characters");
+    console.log("username should be minimum "+ minimumlimit +" characters");
 }
