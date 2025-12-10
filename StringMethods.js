@@ -57,7 +57,7 @@ console.log(a.concat(" ",b));
 //Task
 
 let username = " Saravanan ";
-let minimumlimit = 15;
+let minimumlimit =5;
 console.log(username.trim());
 let userlength=username.length;
 console.log(userlength);
