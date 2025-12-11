@@ -7,6 +7,7 @@ class car{
     }
     displayDetails(){
         console.log(`Carname: ${this.name}, price: ${this.price}`);
+
     }
 }
 
