@@ -105,3 +105,65 @@ class Mobile{
     }
     const display = new Mobile();
     display.turnOn();
+
+
+    //Task
+
+    //Concrete Method
+
+    class Restaurant{
+
+        openRestaurant(){
+            console.log("Restaurants is open");
+        }
+
+    }
+
+    //Encapsulation
+    class Order{
+            #orderID=0;
+            #amount=0; //Private Variable Declared
+            #gst=20;
+    orderInfo(orderID,amount){
+        this.#orderID=orderID;
+        this.#amount=amount; 
+        this.#gst+=amount;   
+        console.log(`Table No 21: OderID is ${this.#orderID} and Amount is ${this.#amount}, ${this.#gst} including GST`);
+    }
+    }
+    let od = new Order();
+    od.orderInfo("R4566",400);
+
+    //Inheritance
+
+    class PizzaRestaurant extends Restaurant{
+
+        prepareFood(){
+            console.log("Cook Pizza");
+        }
+ }
+
+   class BurgerRestaurant extends Restaurant{
+    prepareFood(){
+         console.log("Cook Burger");
+    }
+   }
+ 
+   let res = new PizzaRestaurant();
+   let res1 = new BurgerRestaurant();
+   res.openRestaurant();
+   res.prepareFood();
+   res1.openRestaurant();
+   res1.prepareFood();
+   
+//Polymorphism
+
+function startCooking(restaurant){
+    restaurant.prepareFood();
+}
+
+let pizza = new PizzaRestaurant();
+let burger = new BurgerRestaurant();
+
+startCooking(pizza);
+startCooking(burger);
