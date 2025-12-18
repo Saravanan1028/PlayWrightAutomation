@@ -111,13 +111,37 @@ class Mobile{
 
     //Concrete Method
 
-    class Restaurant{
+   class Restaurant{
 
-        openRestaurant(){
-            console.log("Restaurants is open");
+    // #checkAbstract(){
+
+    // }; //private method declaration
+
+    constructor() {
+        this.#checkAbstract(); //calling private method
+    }
+
+    #checkAbstract(){  //private helper method
+
+        if(this.constructor === Restaurant){
+            
+            console.log("Abstract class cannot be instantiated directly");
+
+        }
+    }
+
+        prepareFood(){
+            console.log("Method 'prepareFood()' must be implemented.");
         }
 
+        openRestaurant(){
+            console.log("Restaurant is Open");
+        }
     }
+
+    const r1 = new Restaurant();
+    r1.prepareFood();
+    r1.openRestaurant(); 
 
     //Encapsulation
     class Order{
